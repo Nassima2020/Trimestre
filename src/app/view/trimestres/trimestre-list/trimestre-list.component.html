@@ -1,0 +1,20 @@
+<table class="table table-bordered table-hover"*ngIf="trimestres.length != 0">
+  <thead>
+  <th>ref</th>
+  <th>nombreTrim</th>
+  <th>annee</th>
+  <th>dateMax</th>
+  <th>dateMin</th>
+  <th>Action</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of trimestres index as i">
+    <td>{{c.ref}}</td>
+    <td>{{c.nombreTrim}}</td>
+    <td>{{c.annee}}</td>
+    <td>{{c.dateMax}}</td>
+    <td>{{c.dateMin}}</td>
+    <td><span (click)="deleteByRef(c,i)" class="fa fa-trash btn btn-sm"></span></td>
+  </tr>
+  </tbody>
+</table>
